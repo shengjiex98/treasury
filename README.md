@@ -16,7 +16,7 @@ Movie 12            # The amount should be the last part of an entry, separated 
 Target 36           #   the description by a space.
 ...
 ```
-This format should feel natural and easy when typed into a mobile device. Once you have an `input.txt` file with the above format, run the following command:
+This format should feel natural to type on a mobile device. Once you have an `input.txt` file with the above format, run the following command:
 ```
 python3 parser.py input.txt output.csv
 ```
@@ -32,7 +32,12 @@ and it will accept an input. Once the category is set for `Target`, however, any
 2/2,Movie,Entertainment,12
 2/2,Target,Grocery,36
 ```
+
+### Tab Completion
+
 The parser also supports tab completion when prompting for categories. For example, if you have already entered `Resaurant` as the category for `Domino's`, then when you are prompt for entering the category for `Hibachi & Co`, you can just type `r` or `re` (as long as there's no conflict) and followed by `tab` and the program will autocompletes it to `Restaurant`. This is very useful when you have a limited number of categories.
+
+## The Data File
 
 The category data will be saved to a file called `categories.csv` for future use, and will be read and appended each time the parser is run. It has a format like this
 ```
